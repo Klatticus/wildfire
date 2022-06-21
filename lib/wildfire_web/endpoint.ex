@@ -10,6 +10,8 @@ defmodule WildfireWeb.Endpoint do
     signing_salt: "/8HFILLA"
   ]
 
+  socket "/notifications", WildfireWeb.NotificationsSocket, websocket: true, longpoll: false
+
   socket "/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]]
 
   # Serve at "/" the static files from "priv/static" directory.
