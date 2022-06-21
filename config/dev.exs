@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :wildfire, Wildfire.Repo,
-  username: "stark",
-  password: "",
+  username: "postgres",
+  password: "postgres",
   hostname: "localhost",
   database: "wildfire_dev",
   stacktrace: true,
