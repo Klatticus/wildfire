@@ -15,9 +15,10 @@ defmodule Wildfire.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: Wildfire.PubSub},
       # Start the Endpoint (http/https)
-      WildfireWeb.Endpoint
+      WildfireWeb.Endpoint,
       # Start a worker by calling: Wildfire.Worker.start_link(arg)
       # {Wildfire.Worker, arg}
+      Wildfire.ESRIRepeat
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

@@ -61,7 +61,9 @@ channel.join()
   .receive("ok", resp => { console.log("Joined successfully", resp) })
   .receive("error", resp => { console.log("Unable to join", resp) })
 
-channel.on("", (payload) => {
+channel.push("request_data").receive("ok", (response) => console.log("requested data", response.message))
+
+channel.on("new_data", (payload) => {
   console.log("new data: ", payload)
 })
 
